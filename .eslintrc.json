@@ -23,6 +23,7 @@
   "rules": {
     "no-use-before-define": "off",
     "space-before-function-paren": "off",
+    "import/no-extraneous-dependencies": "off",
     "consistent-return": "off",
     "prettier/prettier": "error",
     "camelcase": "off",
