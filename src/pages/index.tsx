@@ -16,7 +16,7 @@ const Home: React.FC = () => (
 
       <ChartWrapper>
         <h2>Gráfico fake</h2>
-        <FakeStockChart width={1024} height={490} />
+        <FakeStockChart width={1180} height={560} />
       </ChartWrapper>
     </div>
   </BaseLayout>
