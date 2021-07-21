@@ -88,8 +88,8 @@ export default withTooltip<AreaProps, TooltipData>(
     const handleTooltip = useCallback(
       (
         event:
-          | React.TouchEvent<SVGPathElement>
-          | React.MouseEvent<SVGPathElement>,
+          | React.TouchEvent<SVGRectElement>
+          | React.MouseEvent<SVGRectElement>,
         historic: IBaseStock[],
       ) => {
         const { x } = localPoint(event) || { x: 0 };
@@ -235,14 +235,10 @@ export default withTooltip<AreaProps, TooltipData>(
               curve={curveMonotoneX}
               strokeWidth={1.5}
               stroke={background}
-              onTouchStart={e => handleTooltip(e, historicOne)}
-              onTouchMove={e => handleTooltip(e, historicOne)}
-              onMouseMove={e => handleTooltip(e, historicOne)}
-              onMouseLeave={() => hideTooltip()}
             />
 
             {/* create hide bar */}
-            {/* <Bar
+            <Bar
               key={Math.random()}
               x={margin.left}
               y={margin.top}
@@ -254,7 +250,7 @@ export default withTooltip<AreaProps, TooltipData>(
               onMouseMove={e => handleTooltip(e, historicOne)}
               onMouseLeave={() => hideTooltip()}
               fill="transparent"
-            /> */}
+            />
 
             {/* <Bar
               key={Math.random()}
