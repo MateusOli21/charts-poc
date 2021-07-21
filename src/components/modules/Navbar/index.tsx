@@ -15,7 +15,10 @@ export const Navbar: React.FC = () => (
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/barras">Barras</Link>
+          <Link href="/graficos-de-barra">Barras</Link>
+        </li>
+        <li>
+          <Link href="/graficos-de-linha">Linhas</Link>
         </li>
       </ul>
     </nav>
